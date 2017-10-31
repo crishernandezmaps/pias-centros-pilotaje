@@ -2,10 +2,6 @@ function drawChart(data) {
   var width = 950,
       height = 700;
 
-for (var i = 0; i < data.length; i++) {
-  console.log(data[i].preservacion);
-}
-
   var regiones = ['Antofagasta','Coquimbo','Valparaiso','Metropolitana','Maule','Bio-Bio','Araucanía','Los Lagos']
 
   var content = function(d) {
@@ -31,7 +27,7 @@ for (var i = 0; i < data.length; i++) {
   svg.call(tool_tip);
 
   // Settings
-  var radiusCollide = 25,
+  var radiusCollide = 50,
     strengthValue = 0.1,
     alpha = 0.3,
     left = 250,
@@ -67,7 +63,7 @@ for (var i = 0; i < data.length; i++) {
                                 + '<b>Telefono:</b> ' + d.telefono + '<br/>'
                                 + '<b>Email:</b> ' + "<a class='link-inside' href='mailto:" + d.correo + "'> " + d.correo + '</a><br/>'
                                 + '<b>Web:</b>' + "<a class='link-inside' target='_blank' href='" + d.web + "'> " + d.web + '</a><br/>'
-                                // + '<b>Presentacion:</b> ' + d.presentacion
+                                + '<b>Presentacion:</b> ' + d.presentacion
                               )}
 
   // Circles or Nodes - Potato, Potato...
@@ -84,103 +80,52 @@ for (var i = 0; i < data.length; i++) {
     .on('mouseover', tool_tip.show)
     .on('mouseout', tool_tip.hide);
 
-  d3.select('#preservacion').on('click', function() { // Inocuidad ////////////
-    simulation
-      .force("center", centering)
-      .force('collide', d3.forceCollide(function(d) { if ((d.preservacion).length > 0) { return radiusCollide + 4 } }))
-      .alphaTarget(alpha)
-      .restart();
+  var o = 0.1;  
 
+
+  d3.select('#preservacion').on('click', function() { // Inocuidad ////////////
     circles
-      .attr("r", function(d) { if ((d.preservacion).length > 0) { return radiusCollide + 1 } });
+      .style("opacity", function(d) { if ((d.preservacion).length > 0) { return 1 } else { return o} });
   })
 
   d3.select('#deshidratacion').on('click', function() { // Inocuidad ////////////
-    simulation
-      .force("center", centering)
-      .force('collide', d3.forceCollide(function(d) { if ((d.deshidratacion).length > 0) { return radiusCollide + 4 } }))
-      .alphaTarget(alpha)
-      .restart();
-
     circles
-      .attr("r", function(d) { if ((d.deshidratacion).length > 0) { return radiusCollide + 1 } });
+      .style("opacity", function(d) { if ((d.deshidratacion).length > 0) { return 1 } else { return o} });
   })
 
   d3.select('#separacion').on('click', function() { // Inocuidad ////////////
-    simulation
-      .force("center", centering)
-      .force('collide', d3.forceCollide(function(d) { if ((d.separacion).length > 0) { return radiusCollide + 4 } }))
-      .alphaTarget(alpha)
-      .restart();
-
     circles
-      .attr("r", function(d) { if ((d.separacion).length > 0) { return radiusCollide + 1 } });
+      .style("opacity", function(d) { if ((d.separacion).length > 0) { return 1 } else { return o} });
   })
 
   d3.select('#transformacion').on('click', function() { // Inocuidad ////////////
-    simulation
-      .force("center", centering)
-      .force('collide', d3.forceCollide(function(d) { if ((d.transformacion).length > 0) { return radiusCollide + 4 } }))
-      .alphaTarget(alpha)
-      .restart();
-
     circles
-      .attr("r", function(d) { if ((d.transformacion).length > 0) { return radiusCollide + 1 } });
+      .style("opacity", function(d) { if ((d.transformacion).length > 0) { return 1 } else { return o} });
   })
 
   d3.select('#envasado').on('click', function() { // Inocuidad ////////////
-    simulation
-      .force("center", centering)
-      .force('collide', d3.forceCollide(function(d) { if ((d.envasado).length > 0) { return radiusCollide + 4 } }))
-      .alphaTarget(alpha)
-      .restart();
-
     circles
-      .attr("r", function(d) { if ((d.envasado).length > 0) { return radiusCollide + 1 } });
+      .style("opacity", function(d) { if ((d.envasado).length > 0) { return 1 } else { return o} });
   })
 
   d3.select('#control').on('click', function() { // Inocuidad ////////////
-    simulation
-      .force("center", centering)
-      .force('collide', d3.forceCollide(function(d) { if ((d.control).length > 0) { return radiusCollide + 4 } }))
-      .alphaTarget(alpha)
-      .restart();
-
     circles
-      .attr("r", function(d) { if ((d.control).length > 0) { return radiusCollide + 1 } });
+      .style("opacity", function(d) { if ((d.control).length > 0) { return 1 } else { return o} });
   })
 
   d3.select('#validacion').on('click', function() { // Inocuidad ////////////
-    simulation
-      .force("center", centering)
-      .force('collide', d3.forceCollide(function(d) { if ((d.validacion).length > 0) { return radiusCollide + 4 } }))
-      .alphaTarget(alpha)
-      .restart();
-
     circles
-      .attr("r", function(d) { if ((d.validacion).length > 0) { return radiusCollide + 1 } });
+      .style("opacity", function(d) { if ((d.validacion).length > 0) { return 1 } else { return o} });
   })
 
   d3.select('#antioxidante').on('click', function() { // Inocuidad ////////////
-    simulation
-      .force("center", centering)
-      .force('collide', d3.forceCollide(function(d) { if ((d.antioxidante).length > 0) { return radiusCollide + 4 } }))
-      .alphaTarget(alpha)
-      .restart();
-
     circles
-      .attr("r", function(d) { if ((d.antioxidante).length > 0) { return radiusCollide + 1 } });
+      .style("opacity", function(d) { if ((d.antioxidante).length > 0) { return 1 } else { return o} });
   })
 
   d3.select('#analisis_sensorial').on('click', function() { // Inocuidad ////////////
-    simulation
-      .force("center", centering)
-      .force('collide', d3.forceCollide(function(d) { if ((d.analisis_sensorial).length > 0) { return radiusCollide + 4 } }))
-      .alphaTarget(alpha)
-      .restart();
-
     circles
-      .attr("r", function(d) { if ((d.analisis_sensorial).length > 0) { return radiusCollide + 1 } });
+      .style("opacity", function(d) { if ((d.analisis_sensorial).length > 0) { return 1 } else { return o} });
   })
 
   d3.select('#all').on('click', function() {
