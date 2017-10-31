@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIA+S</title>
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="img/favicons/manifest.json">
+  <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Graph -->
+  <meta property="og:site_name" content="http://www.piaschile.cl/" />
+  <meta property="og:title" content="PIA+S">
+  <meta property="og:longTitle" content="Programa de innovacion en alimentos mas saludables.">
+  <meta property="og:image" content="https://pbs.twimg.com/profile_images/591679684825456640/I-f61hlu_400x400.png" />
+  <meta property="og:description" content="Somos una iniciativa de FIA y CORFO cuyo objetivo es impulsar una Industria de Alimentos más Saludables en Chile." />
+  <meta name="description" content="Somos una iniciativa de FIA y CORFO cuyo objetivo es impulsar una Industria de Alimentos más Saludables en Chile.">
+  <meta name="keywords" content="PIA+S Chile CORFO FIA Innovacion Gobierno" />
+  <meta property="og:locale" content="es_CH" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <!-- Twitter -->
+  <meta name="twitter:site" content="@PIASChile">
+  <meta name="twitter:title" content="Programa de innovacion en alimentos mas saludables">
+  <meta name="twitter:description" content="Somos una iniciativa de FIA y CORFO cuyo objetivo es impulsar una Industria de Alimentos más Saludables en Chile.">
+  <meta name="twitter:creator" content="@PIASChile">
+  <meta name="twitter:image:src" content="https://pbs.twimg.com/profile_images/591679684825456640/I-f61hlu_400x400.png">
+  <meta name="twitter:domain" content="http://www.piaschile.cl">
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/ghotam-rounded/stylesheet.css">
+</head>
+
+<body>
+
+  <nav class="navbar capacidades">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="btn-group">
+          <button id="capbut" class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tecnologias <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li class="but" id="all"><a href="#">todos</a></a></li>
+            <li class="but" id="preservacion"><a href="#">preservacion</a></a></li>
+            <li class="but" id="deshidratacion"><a href="#">deshidratacion</a></a></li>
+            <li class="but" id="separacion"><a href="#">separacion</a></a></li>
+            <li class="but" id="transformacion"><a href="#">transformacion</a></a></li>
+            <li class="but" id="envasado"><a href="#">envasado</a></a></li>
+            <li class="but" id="control"><a href="#">control</a></a></li>
+            <li class="but" id="validacion"><a href="#">validacion</a></a></li>
+            <li class="but" id="antioxidante"><a href="#">antioxidante</a></a></li>
+            <li class="but" id="analisis_sensorial"><a href="#">analisis_sensorial</a></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid text-center">
+    <div class="row content">
+      <div class="col-sm-8 text-left" id="centros"></div>
+      <div class="col-sm-4 sidenav">
+        <div class="well">
+          <div id="hidden"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- /////// Scripts /////// -->
+  <!-- D3 -->
+  <script src="js/d3.v4.min.js"></script>
+  <script src="js/d3-tip.js"></script>
+  <script src="js/d3-legend.min.js"></script>
+  <!-- Tabletop -->
+  <script src="js/tabletop.js"></script>
+  <!-- Custom Visualizations -->
+  <!-- <script src="js/grupos.js"></script> -->
+  <script src="js/centros.js"></script>
+  <!-- Libraries -->
+  <script src="js/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/217857b264.js"></script>
+
+  <!-- Menu change according to the option -->
+  <script type="text/javascript">
+  $(function(){
+    $(".capacidades li a").click(function(){
+      $("#capbut:first-child").text($(this).text());
+      $("#capbut:first-child").val($(this).text());
+    });
+  });
+  $(function(){
+    $(".redes li a").click(function(){
+      $("#redbut:first-child").text($(this).text());
+      $("#redbut:first-child").val($(this).text());
+    });
+  });
+  </script>
+
+</body>
+</html>
