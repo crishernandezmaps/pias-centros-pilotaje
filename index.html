@@ -6,139 +6,95 @@
   <meta http-equiv="X-UA-Compatible"="IE=edge">
   <meta name="viewport"="width=device-width, initial-scale=1">
   <title>PIA+S</title>
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
-  <link rel="manifest" href="img/favicons/manifest.json">
-  <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="theme-color"="#ffffff">
-  <!-- Graph -->
-  <meta property="og:site_name"="http://www.piaschile.cl/" />
-  <meta property="og:title"="PIA+S">
-  <meta property="og:longTitle"="Programa de innovacion en alimentos mas saludables.">
-  <meta property="og:image"="https://pbs.twimg.com/profile_images/591679684825456640/I-f61hlu_400x400.png" />
-  <meta property="og:description"="Somos una iniciativa de FIA y CORFO cuyo objetivo es impulsar una Industria de Alimentos más Saludables en Chile." />
-  <meta name="description"="Somos una iniciativa de FIA y CORFO cuyo objetivo es impulsar una Industria de Alimentos más Saludables en Chile.">
-  <meta name="keywords"="PIA+S Chile CORFO FIA Innovacion Gobierno" />
-  <meta property="og:locale"="es_CH" />
-  <meta property="og:locale:alternate"="en_US" />
-  <!-- Twitter -->
-  <meta name="twitter:site"="@PIASChile">
-  <meta name="twitter:title"="Programa de innovacion en alimentos mas saludables">
-  <meta name="twitter:description"="Somos una iniciativa de FIA y CORFO cuyo objetivo es impulsar una Industria de Alimentos más Saludables en Chile.">
-  <meta name="twitter:creator"="@PIASChile">
-  <meta name="twitter:image:src"="https://pbs.twimg.com/profile_images/591679684825456640/I-f61hlu_400x400.png">
-  <meta name="twitter:domain"="http://www.piaschile.cl">
-  <!-- Styles -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/ghotam-rounded/stylesheet.css">
 </head>
 
 <body>
 
-<div class="btn-group btn-group-sm menu-options" role="group" aria-label="menu-options">
-  <button type="button" class="btn btn-secondary" id="pre">preservacion</button>
-  <button type="button" class="btn btn-secondary" id="des">deshidratacion</button>
-  <button type="button" class="btn btn-secondary" id="sep">separacion</button>
-  <button type="button" class="btn btn-secondary" id="tra">transformacion</button>
-  <button type="button" class="btn btn-secondary" id="env">envasado</button>
-  <button type="button" class="btn btn-secondary" id="con">control</button>
-  <button type="button" class="btn btn-secondary" id="val">validacion</button>
-  <button type="button" class="btn btn-secondary" id="ant">antioxidante</button>
-  <button type="button" class="btn btn-secondary" id="ana">analisis_sensorial</button>
+<!-- <p class='title'>Tecnologías</p> -->
+<div class="btn-group btn-group-sm menuDos" role="group" aria-label="Small button group">
+  <button type="button" class="btn btn-secondary" id="anto">Antofagasta</button>
+  <button type="button" class="btn btn-secondary" id="coqu">Coquimbo</button>
+  <button type="button" class="btn btn-secondary" id="valp">Valparaíso</button>
+  <button type="button" class="btn btn-secondary" id="maul">Maule</button>
+  <button type="button" class="btn btn-secondary" id="biob">BíoBío</button>
+  <button type="button" class="btn btn-secondary" id="arau">Araucanía</button>
+  <button type="button" class="btn btn-secondary" id="losl">Los Lagos</button>
+  <button type="button" class="btn btn-secondary" id="metr">Metropolitana</button>
+</div>
+<div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+  <button type="button" class="btn btn-secondary" id="pre">Preservacion</button>
+  <button type="button" class="btn btn-secondary" id="des">Deshidratacion</button>
+  <button type="button" class="btn btn-secondary" id="sep">Separacion</button>
+  <button type="button" class="btn btn-secondary" id="tra">Transformacion</button>
+  <button type="button" class="btn btn-secondary" id="env">Envasado</button>
+  <button type="button" class="btn btn-secondary" id="con">Control</button>
+  <button type="button" class="btn btn-secondary" id="val">Validacion</button>
+  <button type="button" class="btn btn-secondary" id="ant">Antioxidante</button>
+  <button type="button" class="btn btn-secondary" id="ana">Sensorial</button>
 </div>
 
-
-
-  <div id="showgrid">
-    <div class="row">
-      <div class="column pre" id="1">
-        <div class="front">
-          <h1>Centro de Pilotaje Desierto de Atacama</h1>
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-12">
+        <div id="showgrid">
+          <div class="row">
+            <div class="column anto" id="1">
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+            <div class="column pre des sep con ant ana coqu" id="2">
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+            <div class="column pre des sep tra env con ant ana valp" id="3">
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column pre des sep tra env con val ant ana maul" id="4">
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+            <div class="column pre des sep tra env con val ant ana biob" id="5">
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+            <div class="column pre des sep tra con val ant ana arau" id="6">
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column pre des tra env con ant ana losl" id="7">
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+            <div class="column pre des sep tra env con ant ana losl" id="8">
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+            <div class="column pre sep con ana metr" id="9">
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+            <div class="column des sep tra ana metr" id="10">
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+          </div>
         </div>
-        <div class="back">
-          <p class="txt">El  Centro de Pilotaje  Desierto de Atacama, entrega servicios
-            en diseño, fabricación y pilotaje de equipos/productos innovadores. Los productos generados por el
-            Centro podrán ser exportadas a otras regiones de Chile o al exterior y deberán ser gestionadas las
-            patentes y protecciones industriales.</p>
-        </div>
-      </div>
-      <div class="column pre" id="2">
-        <div class="front">
-          <h1>Centro de Estudios Avanzados en Zonas Áridas (CEAZA)</h1>
-        </div>
-        <div class="back">
-          <h1>INFO</h1></div>
-      </div>
-      <div class="column des" id="3">
-        <div class="front">
-          <h1>Centro Regional de Estudios en Alimentos Saludables (CREAS)</h1></div>
-        <div class="back">
-          <h1>INFO</h1></div>
-      </div>
     </div>
-    <div class="row">
-      <div class="column des" id="4">
-        <div class="front">
-          <h1>Cramer</h1></div>
-        <div class="back">
-          <h1>INFO</h1></div>
-      </div>
-      <div class="column des" id="5">
-        <div class="front">
-          <h1>Fundación Chile</h1></div>
-        <div class="back">
-          <h1>INFO</h1></div>
-      </div>
-      <div class="column" id="6">
-        <div class="front">
-          <h1>Centro de Estudios en Alimentos Procesados (CEAP)</h1></div>
-        <div class="back">
-          <h1>INFO</h1></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column" id="7">
-        <div class="front">
-          <h1>Centro de Desarrollo Tecnológico Agroindustrial (CDTA)</h1></div>
-        <div class="back">
-          <h1>INFO</h1></div>
-      </div>
-      <div class="column" id="8">
-        <div class="front">
-          <h1>Instituto de Agroindustria</h1></div>
-        <div class="back">
-          <h1>INFO</h1></div>
-      </div>
-      <div class="column" id="9">
-        <div class="front">
-          <h1>CEUS Llanquihue</h1></div>
-        <div class="back">
-          <h1>INFO</h1></div>
-      </div>
-      <!-- <div class="column" id="10">
-        <div class="front">
-          <h1>Planta Procesadora de Alimentos</h1></div>
-        <div class="back">
-          <h1>INFO</h1></div>
-      </div> -->
-    </div>
-  </div>
-  </div>
 
   </div>
+</div>
 
-
-  <!-- /////// Scripts /////// -->
-  <!-- D3 -->
   <script src="js/d3.v4.min.js"></script>
-  <!-- Tabletop -->
   <script src="js/tabletop.js"></script>
-  <!-- Custom Visualizations -->
   <script src="js/centros.js"></script>
-  <!-- Libraries -->
   <script src="js/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="js/jquery.flip.min.js"></script>
   <script src="js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -146,5 +102,4 @@
   <script src="https://use.fontawesome.com/217857b264.js"></script>
 
 </body>
-
 </html>

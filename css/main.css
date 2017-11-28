@@ -12,9 +12,16 @@ html, body {
   font-family: 'GothamRoundedMedium', Arial, Helvetica, sans-serif;
 }
 
+br {
+  display: block; /* makes it have a width */
+  content: ""; /* clears default height */
+  margin-top: -10%; /* change this to whatever height you want it */
+}
+
 a {
   color: #717770;
-  font-size: 0.8em;
+  font-size: 0.6em;
+  margin-left: 3%;
 }
 
 a:link {
@@ -25,11 +32,44 @@ a:hover {
   color: #9f9f9e;
 }
 
-.menu-options {
-  position: absolute;
-  left: 20%;
-  top: 3%;
+.title {
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: -3%;
 }
+
+.row {
+  width: 100%;
+  margin: auto;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: silver;
+  color: #333;
+}
+
+.active{
+  background: silver;
+}
+button.btn:active{
+  background: silver;
+}
+
+.menuDos {
+  margin-bottom: -2%;
+  margin-left: 5%;
+}
+
+.btn-group {
+  margin-top: 2%;
+  left: 17.5%;
+}
+
 
 #grid {
   position: absolute;
@@ -40,29 +80,44 @@ a:hover {
 }
 
 .front {
-  background: silver;
+  background: #dadad9;
+  border: 1px solid #f1f1f1;
+  cursor: pointer;
 }
 
 .back {
-  background: tomato;
+  background: white;
+  border: 1px solid #f1f1f1;
+  cursor: pointer;
 }
 
-h1 {
-  font-size: 0.8em;
-  padding: 3%;
+.text-left {
+  margin-left: -3%;
+}
+
+/*///////// Media Queries ///////////*/
+@media only screen and (max-width: 1024px) {
+  .btn-group {
+    top: 1%;
+    left: 10%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .btn {
+    width: 4%;
+    color: white;
+  }
 }
 
 @media screen and (min-device-width:900px) {
   div#showgrid {
-    width: 900px;
+    width: 600px;
     margin: auto;
   }
 }
 
-.row {
-  width: 100%;
-  margin: auto;
-}
+
 
 @media (min-device-width: 698px) {
   .column {
@@ -73,14 +128,23 @@ h1 {
   }
 }
 
+
+
 .column {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   margin: auto;
 }
 
-.txt {
+.front-text {
   font-size: 0.8em;
+  padding: 3%;
+  text-align: center;
+  margin-top: 45%;
+}
+
+.back-text {
+  font-size: 0.6em;
   padding: 3%;
   text-align: justify;
 }
