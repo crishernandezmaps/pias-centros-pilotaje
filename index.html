@@ -13,28 +13,35 @@
 
 <body>
 
-<!-- <p class='title'>Tecnologías</p> -->
-<div class="btn-group btn-group-sm menuDos" role="group" aria-label="Small button group">
-  <button type="button" class="btn btn-secondary" id="anto">Antofagasta</button>
-  <button type="button" class="btn btn-secondary" id="coqu">Coquimbo</button>
-  <button type="button" class="btn btn-secondary" id="valp">Valparaíso</button>
-  <button type="button" class="btn btn-secondary" id="maul">Maule</button>
-  <button type="button" class="btn btn-secondary" id="biob">BíoBío</button>
-  <button type="button" class="btn btn-secondary" id="arau">Araucanía</button>
-  <button type="button" class="btn btn-secondary" id="losl">Los Lagos</button>
-  <button type="button" class="btn btn-secondary" id="metr">Metropolitana</button>
-</div>
-<div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-  <button type="button" class="btn btn-secondary" id="pre">Preservacion</button>
-  <button type="button" class="btn btn-secondary" id="des">Deshidratacion</button>
-  <button type="button" class="btn btn-secondary" id="sep">Separacion</button>
-  <button type="button" class="btn btn-secondary" id="tra">Transformacion</button>
-  <button type="button" class="btn btn-secondary" id="env">Envasado</button>
-  <button type="button" class="btn btn-secondary" id="con">Control</button>
-  <button type="button" class="btn btn-secondary" id="val">Validacion</button>
-  <button type="button" class="btn btn-secondary" id="ant">Antioxidante</button>
-  <button type="button" class="btn btn-secondary" id="ana">Sensorial</button>
-</div>
+  <div class="navbar-header">
+    <div class="btn-group geoB">
+      <button id="capbutB" class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Región <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li class="but" id="anto"><a href="#">Antofagasta</a></a></li>
+        <li class="but" id="coqu"><a href="#">Coquimbo</a></a></li>
+        <li class="but" id="valp"><a href="#">Valparaíso</a></a></li>
+        <li class="but" id="maul"><a href="#">Maule</a></a></li>
+        <li class="but" id="biob"><a href="#">BíoBío</a></a></li>
+        <li class="but" id="arau"><a href="#">Araucanía</a></a></li>
+        <li class="but" id="losl"><a href="#">Los Lagos</a></a></li>
+        <li class="but" id="metr"><a href="#">Metropolitana</a></a></li>
+      </ul>
+    </div>
+    <div class="btn-group geoC">
+      <button id="capbutC" class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tecnología <span class="caret"></span></button>
+      <ul class="dropdown-menu" id="capbut">
+        <li class="but" id="pre"><a href="#">Preservacion</a></a></li>
+        <li class="but" id="des"><a href="#">Deshidratacion</a></a></li>
+        <li class="but" id="sep"><a href="#">Separacion</a></a></li>
+        <li class="but" id="tra"><a href="#">Transformacion</a></a></li>
+        <li class="but" id="env"><a href="#">Envasado</a></a></li>
+        <li class="but" id="con"><a href="#">Control</a></a></li>
+        <li class="but" id="val"><a href="#">Validacion</a></a></li>
+        <li class="but" id="ant"><a href="#">Antioxidante</a></a></li>
+        <li class="but" id="ana"><a href="#">Sensorial</a></a></li>
+      </ul>
+    </div>
+  </div>
 
 <div class="container-fluid">
   <div class="row content">
@@ -100,6 +107,34 @@
   <script src="js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="https://use.fontawesome.com/217857b264.js"></script>
+
+  <!-- Menu change according to the option -->
+  <script type="text/javascript">
+  $(function(){
+    $(".geoA li a").click(function(){
+      $("#capbutA:first-child").text($(this).text());
+      $("#capbutA:first-child").val($(this).text());
+    });
+  });
+  $(function(){
+    $(".geoB li a").click(function(){
+      $("#capbutB:first-child").text($(this).text());
+      $("#capbutB:first-child").val($(this).text());
+    });
+  });
+  $(function(){
+    $(".geoC li a").click(function(){
+      $("#capbutC:first-child").text($(this).text());
+      $("#capbutC:first-child").val($(this).text());
+    });
+  });
+  function rel() {
+    location.reload();
+  }
+  document.documentElement.classList.remove("no-js");
+  document.documentElement.classList.add("js");
+
+  </script>
 
 </body>
 </html>
