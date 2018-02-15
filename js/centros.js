@@ -149,7 +149,8 @@ $("#10 .back").append( "<p class='back-text'><b>Región:</b> " + data[9]['region
 
 ////////////////////////////////// Tabletop //////////////////////////////////
 url = 'https://docs.google.com/spreadsheets/d/1SXNsRptqggnKnCOuylcIBDUZYtBjUpsL2SUUh7KqN4Q/edit?usp=sharing'
-var centros = '1SXNsRptqggnKnCOuylcIBDUZYtBjUpsL2SUUh7KqN4Q'
+// var centros = '1SXNsRptqggnKnCOuylcIBDUZYtBjUpsL2SUUh7KqN4Q'
+var centros = '1-r_YlW3ksyc1l5BWB4evcIDatsfl4fSoj4xRF9uKhHg'
 var options = {
   key: centros,
   simpleSheet: true,
